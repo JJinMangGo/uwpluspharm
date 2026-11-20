@@ -1,0 +1,30 @@
+/* UWPLUSPHARM color tokens — Figma variables "UWPLUSPHARM Color"와 1:1 */
+:root {
+  /* brand */
+  --brand-navy: #1E2A6E;
+  --brand-cyan: #20B5CC;
+  --brand-blue: #3B5BDB;
+
+  /* background */
+  --bg-white: #FFFFFF;
+  --bg-surface: #F3F7FA;
+  --bg-tint: #E6F6F9;
+  --bg-tab: #E6ECF2;
+  --bg-input: #F6F8FB;
+
+  /* text */
+  --text-primary: #1B1C1C;
+  --text-secondary: #4A4B4C;
+  --text-muted: #646566;
+  --text-subtle: #8A8F99;
+  --text-placeholder: #A0A4AD;
+  --text-on-dark: #B9C1E0;
+
+  /* line */
+  --line-default: #E3E8EF;
+  --line-strong: #D4D9E3;
+
+  /* kakao */
+  --kakao-bg: #FEE500;
+  --kakao-text: #191919;
+}
