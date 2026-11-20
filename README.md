@@ -9,7 +9,7 @@
 - `_src/build.py` — 헤더·푸터·조각을 끼워 루트에 HTML 생성. 이메일·전화·카카오 링크는 맨 위 `SITE`에서만 수정
 - `css/tokens.css` — 피그마 컬러 변수와 1:1
 - `css/common.css`, `css/main.css` — 공통 / 메인
-- `js/common.js`, `js/main.js` — 공통 / 메인 (Swiper 11, `js/vendor`)
+- `js/common.js`, `js/main.js` — 공통 / 메인 (Swiper 11은 jsdelivr CDN으로 로드, `lib: swiper` 메타가 있는 페이지만)
 
 ## 빌드
 ```

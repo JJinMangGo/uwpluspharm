@@ -1,4 +1,4 @@
-/* UWPLUSPHARM main.js — Swiper 11 (js/vendor/swiper-bundle.min.js) */
+/* UWPLUSPHARM main.js — Swiper 11 (CDN: jsdelivr swiper@11) */
 (function () {
   'use strict';
   if (typeof Swiper === 'undefined') return;
@@ -73,6 +73,7 @@
       }, true);
       return new Swiper(el, {
         slidesPerView: 'auto',
+        grabCursor: true,
         spaceBetween: 40,
         speed: 600,
         loop: true,

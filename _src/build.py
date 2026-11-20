@@ -29,7 +29,7 @@ TPL = '''<!DOCTYPE html>
 <title>{title}</title>
 <meta name="description" content="유원플러스팜 — 액상밴드·창상피복제·리튬이온 소화기 전문기업">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<link rel="stylesheet" href="css/tokens.css">
+{vcss}<link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/common.css">
 {css}</head>
 <body class="{body}">
@@ -38,7 +38,7 @@ TPL = '''<!DOCTYPE html>
 {content}
 </main>
 {footer}
-<script src="js/common.js"></script>
+{vjs}<script src="js/common.js"></script>
 {js}</body>
 </html>
 '''
@@ -67,9 +67,12 @@ for page in sorted((SRC / 'pages').glob('*.html')):
     for mn in MENUS:
         h = h.replace('{{ON_' + mn + '}}', ' is-active' if meta.get('menu') == mn else '')
     title = '유원플러스팜' if page.stem == 'index' else f"{meta.get('title', '')} | 유원플러스팜"
+    swiper = 'swiper' in meta.get('lib', '')
+    vcss = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">\n' if swiper else ''
+    vjs = '<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>\n' if swiper else ''
     css = ''.join(f'<link rel="stylesheet" href="css/{c.strip()}.css">\n' for c in meta.get('css', '').split(',') if c.strip())
     js = ''.join(f'<script src="js/{j.strip()}.js"></script>\n' for j in meta.get('js', '').split(',') if j.strip())
-    out = TPL.format(title=title, css=css, js=js, body=meta.get('body', 'sub'),
+    out = TPL.format(title=title, css=css, js=js, vcss=vcss, vjs=vjs, body=meta.get('body', 'sub'),
                      header=h.rstrip(), content=raw.rstrip(), footer=footer.rstrip())
     (ROOT / page.name).write_text(fill(include(out)), encoding='utf-8')
     print('built', page.name)
