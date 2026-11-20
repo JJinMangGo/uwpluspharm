@@ -10,17 +10,18 @@
 .hero__copy{position:absolute;z-index:2;left:320px;top:50%;transform:translateY(-38%);width:608px;display:flex;flex-direction:column;gap:24px}
 .hero__title{font-size:56px;font-weight:700;line-height:1.25;letter-spacing:-.02em;color:var(--text-primary)}
 .hero__desc{font-size:19px;line-height:1.6;color:var(--text-muted)}
-.hero__ctrl{display:flex;flex-wrap:nowrap;align-items:center;gap:16px;min-width:max-content;margin-top:16px;font-size:14px;font-weight:700;color:var(--text-primary)}
+.hero__ctrl{display:flex;flex-wrap:nowrap;align-items:center;gap:12px;min-width:max-content;margin-top:16px;font-size:14px;font-weight:700;line-height:22px;color:var(--text-muted)}
 .hero__cur{color:var(--brand-cyan)}
-.hero__bar{position:relative;width:100px;height:2px;background:var(--line-strong);overflow:hidden}
-.hero__bar i{position:absolute;inset:0;background:var(--brand-navy);transform-origin:left;transform:scaleX(0)}
+.hero__bar{position:relative;width:100px;height:1px;border-radius:8px;background:rgba(100,101,102,.2);overflow:hidden}
+.hero__bar i{position:absolute;inset:0;border-radius:8px;background:var(--text-muted);transform-origin:left;transform:scaleX(0)}
 .hero__bar i.is-run{animation:heroBar var(--hero-delay,5s) linear forwards}
 .hero.is-paused .hero__bar i{animation-play-state:paused}
 @keyframes heroBar{to{transform:scaleX(1)}}
 .hero__num,.hero__bar,.hero__pause{flex:none}
-.hero__num{min-width:52px;white-space:nowrap}
-.hero__pause{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--line-strong)}
-.hero__pause svg{width:10px;height:10px}
+.hero__num{min-width:46px;white-space:nowrap}
+.hero__pause{width:20px;height:20px;display:flex;align-items:center;justify-content:center;color:var(--text-muted)}
+.hero__pause:hover{color:var(--brand-navy)}
+.hero__pause svg{width:20px;height:20px}
 .hero__pause .ico-play{display:none}
 .hero.is-paused .hero__pause .ico-play{display:block}
 .hero.is-paused .hero__pause .ico-pause{display:none}
