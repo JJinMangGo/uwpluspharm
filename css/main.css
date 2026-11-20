@@ -70,10 +70,8 @@
 .m-biz__head{display:flex;flex-direction:column;gap:16px}
 .m-biz__tabs{display:flex;flex-wrap:wrap;gap:8px}
 .m-biz__tab{display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 26px;border-radius:999px;border:1px solid var(--line-strong);background:var(--bg-white);font-size:17px;font-weight:500;color:var(--text-secondary);transition:all .2s}
-.m-biz__tab em{font-style:normal;font-size:14px;font-weight:700;color:var(--text-subtle)}
 .m-biz__tab:hover{border-color:var(--brand-navy);color:var(--brand-navy)}
 .m-biz__tab.is-active{background:var(--brand-navy);border-color:var(--brand-navy);color:var(--bg-white);font-weight:700}
-.m-biz__tab.is-active em{color:var(--brand-cyan)}
 .m-biz__stage{position:relative}
 .m-biz__swiper{padding:0 0 40px;margin:0 0 -40px}
 .m-biz__swiper[hidden]{display:none}
