@@ -23,8 +23,6 @@
       speed: 800,
       loop: true,
       autoplay: reduce ? false : { delay: DELAY, disableOnInteraction: false },
-      pagination: { el: '.hero__dots', clickable: true },
-      a11y: { prevSlideMessage: '이전 슬라이드', nextSlideMessage: '다음 슬라이드', paginationBulletMessage: '{{index}}번 슬라이드' },
       on: {
         slideChange: function (sw) { cur.textContent = pad(sw.realIndex + 1); runBar(); }
       }

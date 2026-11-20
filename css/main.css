@@ -3,23 +3,22 @@
 
 /* ---------- Hero ---------- */
 .hero{position:relative;height:740px;overflow:hidden;background:var(--bg-surface)}
-.hero .swiper-wrapper{height:100%}
+.hero>.swiper-wrapper{position:absolute;inset:0;height:auto}
 .hero__slide{height:100%}
 .hero__slide img{width:100%;height:100%;object-fit:cover}
 .hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.7) 35%,rgba(255,255,255,0) 58%)}
 .hero__copy{position:absolute;z-index:2;left:320px;top:50%;transform:translateY(-38%);width:608px;display:flex;flex-direction:column;gap:24px}
 .hero__title{font-size:56px;font-weight:700;line-height:1.25;letter-spacing:-.02em;color:var(--text-primary)}
 .hero__desc{font-size:19px;line-height:1.6;color:var(--text-muted)}
-.hero__ctrl{display:flex;align-items:center;gap:16px;margin-top:16px;font-size:14px;font-weight:700;color:var(--text-primary)}
+.hero__ctrl{display:flex;flex-wrap:nowrap;align-items:center;gap:16px;min-width:max-content;margin-top:16px;font-size:14px;font-weight:700;color:var(--text-primary)}
 .hero__cur{color:var(--brand-cyan)}
-.hero__dots{position:static;display:flex;gap:8px;width:auto}
-.hero__dots .swiper-pagination-bullet{width:10px;height:10px;margin:0!important;border-radius:50%;background:var(--line-strong);opacity:1;transition:background-color .2s,width .2s}
-.hero__dots .swiper-pagination-bullet-active{width:28px;border-radius:999px;background:var(--brand-navy)}
 .hero__bar{position:relative;width:100px;height:2px;background:var(--line-strong);overflow:hidden}
 .hero__bar i{position:absolute;inset:0;background:var(--brand-navy);transform-origin:left;transform:scaleX(0)}
 .hero__bar i.is-run{animation:heroBar var(--hero-delay,5s) linear forwards}
 .hero.is-paused .hero__bar i{animation-play-state:paused}
 @keyframes heroBar{to{transform:scaleX(1)}}
+.hero__num,.hero__bar,.hero__pause{flex:none}
+.hero__num{min-width:52px;white-space:nowrap}
 .hero__pause{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;border:1px solid var(--line-strong)}
 .hero__pause svg{width:10px;height:10px}
 .hero__pause .ico-play{display:none}
@@ -115,7 +114,7 @@
 }
 
 /* ---------- 국내·해외 네트워크 ---------- */
-.m-net{padding:120px 0;text-align:center}
+.m-net{padding:120px 0;text-align:center;overflow:hidden}
 .m-net__title{font-size:52px;font-weight:700;line-height:1.3;letter-spacing:-.02em}
 .m-net__desc{margin-top:16px;font-size:18px;color:var(--text-muted)}
 .m-net__map{position:relative;width:100%;max-width:1280px;margin:60px auto 0;aspect-ratio:2/1}
@@ -130,8 +129,8 @@
   .m-net{padding:80px 0}
   .m-net__title{font-size:28px}
   .m-net__desc{font-size:15px;padding:0 20px}
-  .m-net__map{margin-top:32px;width:170%;margin-left:-55%}
-  .m-net__pin{font-size:11px;padding:0 8px}
+  .m-net__map{margin-top:32px;width:118%;margin-left:-14%}
+  .m-net__pin{height:20px;font-size:10px;padding:0 7px}
   .m-net__chips{margin-top:24px;gap:8px;padding:0 20px}
   .m-net__chips li{height:38px;padding:0 16px;font-size:14px}
 }
