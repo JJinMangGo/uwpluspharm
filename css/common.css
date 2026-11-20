@@ -145,7 +145,10 @@ input,textarea,select{font:inherit;color:inherit}
 /* =========================================================
    Sub common: visual, tabs, CTA
    ========================================================= */
-.sub-visual{position:relative;overflow:hidden;padding:192px 0 96px;text-align:center;color:var(--bg-white);background:linear-gradient(120deg,#1E2A6E 0%,#24368a 55%,#2b4c9b 100%)}
+.sub #main{padding-top:96px}
+.sub .header{background:#F2F5F9}
+.sub .header.is-scrolled,.sub .header.is-open{background:var(--bg-white)}
+.sub-visual{position:relative;overflow:hidden;padding:96px 0;text-align:center;color:var(--bg-white);background:linear-gradient(120deg,#1E2A6E 0%,#24368a 55%,#2b4c9b 100%)}
 .sub-visual::before,.sub-visual::after{content:'';position:absolute;border-radius:50%;filter:blur(160px);pointer-events:none}
 .sub-visual::before{width:560px;height:560px;left:-120px;top:-120px;background:rgba(32,181,204,.35)}
 .sub-visual::after{width:520px;height:520px;right:-80px;bottom:-200px;background:rgba(59,91,219,.45)}
@@ -157,7 +160,7 @@ input,textarea,select{font:inherit;color:inherit}
 .breadcrumb li+li::before{content:'›';margin-right:8px}
 .breadcrumb li:last-child{color:var(--bg-white)}
 @media (max-width:768px){
-  .sub-visual{padding:120px 0 56px}
+  .sub-visual{padding:56px 0}
   .sub-visual__title{font-size:32px}
   .sub-visual__desc{font-size:15px;padding:0 20px}
 }
@@ -167,7 +170,7 @@ input,textarea,select{font:inherit;color:inherit}
 .sub-tabs__link{display:inline-flex;align-items:center;height:48px;padding:0 28px;border-radius:999px;border:1px solid var(--line-strong);font-size:16px;font-weight:500;color:var(--text-secondary);white-space:nowrap}
 .sub-tabs__link:hover{border-color:var(--brand-navy);color:var(--brand-navy)}
 .sub-tabs__link.is-active{background:var(--brand-navy);border-color:var(--brand-navy);color:var(--bg-white);font-weight:700}
-@media (max-width:1024px){.sub-tabs{top:72px}}
+@media (max-width:1024px){.sub-tabs{top:72px}.sub #main{padding-top:72px}}
 @media (max-width:768px){
   .sub-tabs__list{justify-content:flex-start;overflow-x:auto;padding:14px 20px;scrollbar-width:none}
   .sub-tabs__list::-webkit-scrollbar{display:none}

@@ -1,0 +1,29 @@
+<!-- title: 오시는 길 | menu: company | crumb: 오시는 길 | css: sub | js: sub -->
+<section class="location">
+  <div class="inner">
+    <div class="sec-head reveal">
+      <span class="eyebrow eyebrow--cyan">LOCATION</span>
+      <h2 class="sec-title">오시는 길</h2>
+      <p class="sec-desc">{{ADDR}}</p>
+    </div>
+    <!-- 카카오맵 API: 앱키 발급 후 아래 #kakao-map 에 지도 생성 (개발 단계). 지금은 자리 표시 -->
+    <div class="location__map reveal" id="kakao-map" data-addr="{{ADDR}}">
+      <div class="location__map-ph">
+        <svg viewBox="0 0 48 64" aria-hidden="true"><path d="M24 0C10.7 0 0 10.7 0 24c0 18 24 40 24 40s24-22 24-40C48 10.7 37.3 0 24 0Z" fill="#1E2A6E"/><circle cx="24" cy="24" r="9" fill="#20B5CC"/></svg>
+        <b>(주)유원플러스팜</b>
+      </div>
+    </div>
+    <ul class="location__info">
+      <li class="reveal"><span class="location__ico"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 20s6.5-5.7 6.5-10.8a6.5 6.5 0 0 0-13 0C4.5 14.3 11 20 11 20Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="11" cy="9.2" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span><dl><dt>주소</dt><dd>{{ADDR}}</dd></dl></li>
+      <li class="reveal"><span class="location__ico"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M6.2 3.1h2.4l1.2 4-1.8 1.3a10.4 10.4 0 0 0 5.6 5.6l1.3-1.8 4 1.2v2.4a2 2 0 0 1-2.1 2A14.7 14.7 0 0 1 4.2 5.2a2 2 0 0 1 2-2.1Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><dl><dt>대표번호</dt><dd><a href="tel:{{TEL}}">{{TEL}}</a></dd></dl></li>
+      <li class="reveal"><span class="location__ico"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M6 8V3h10v5M6 15H3.5V8h15v7H16M6 12h10v7H6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><dl><dt>팩스</dt><dd>{{FAX}}</dd></dl></li>
+      <li class="reveal"><span class="location__ico"><svg viewBox="0 0 22 22" aria-hidden="true"><rect x="2.5" y="4.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3 5.5 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><dl><dt>이메일</dt><dd><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></dd></dl></li>
+    </ul>
+    <div class="location__btns">
+      <a class="btn btn--kakao" href="https://map.kakao.com/link/search/경기도 성남시 수정구 복정로 101" target="_blank" rel="noopener">카카오맵으로 길찾기</a>
+      <a class="btn btn--naver" href="https://map.naver.com/p/search/경기도 성남시 수정구 복정로 101" target="_blank" rel="noopener">네이버지도로 길찾기</a>
+    </div>
+  </div>
+</section>
+
+<!-- include:cert-band -->

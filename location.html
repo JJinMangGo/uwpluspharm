@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오시는 길 | 유원플러스팜</title>
+<meta name="description" content="유원플러스팜 — 액상밴드·창상피복제·리튬이온 소화기 전문기업">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/sub.css">
+</head>
+<body class="sub">
+<header class="header">
+  <div class="header__inner">
+    <h1 class="header__logo"><a href="index.html"><img src="images/common/logo.png" alt="(주)유원플러스팜"></a></h1>
+    <nav class="gnb" aria-label="주메뉴">
+      <ul class="gnb__list">
+        <li class="gnb__item is-active"><a class="gnb__link" href="company.html">회사소개</a></li>
+        <li class="gnb__item"><a class="gnb__link" href="business-liquid.html">사업분야</a></li>
+        <li class="gnb__item"><a class="gnb__link" href="products.html">제품안내</a></li>
+        <li class="gnb__item"><a class="gnb__link" href="contact.html">고객지원</a></li>
+      </ul>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--kakao" href="#" target="_blank" rel="noopener">
+        <svg class="ico-kakao" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.48 3 2 6.54 2 10.9c0 2.8 1.86 5.27 4.66 6.67-.2.76-.74 2.75-.85 3.18-.13.53.2.52.41.38.17-.11 2.67-1.81 3.75-2.55.66.1 1.33.15 2.03.15 5.52 0 10-3.54 10-7.9S17.52 3 12 3z"/></svg>
+        <span>문의하기</span>
+      </a>
+      <button type="button" class="btn-menu" aria-label="전체메뉴" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+  <div class="fullnav">
+    <div class="fullnav__cols">
+      <div class="fullnav__col"><a href="company.html">회사개요</a><a href="cert.html">인증현황</a><a href="location.html">오시는 길</a></div>
+      <div class="fullnav__col"><a href="business-liquid.html">액상밴드</a><a href="business-wound.html">창상피복제</a><a href="business-fire.html">리튬이온 소화기</a></div>
+      <div class="fullnav__col"><a href="products.html">전체 제품</a></div>
+      <div class="fullnav__col"><a href="contact.html">문의하기</a><a href="brochure.html">영문 소개서</a></div>
+    </div>
+  </div>
+</header>
+<nav class="mnav" aria-label="모바일 메뉴">
+  <ul>
+    <li class="mnav__item"><button type="button" class="mnav__btn" aria-expanded="false">회사소개</button>
+      <div class="mnav__sub"><a href="company.html">회사개요</a><a href="cert.html">인증현황</a><a href="location.html">오시는 길</a></div></li>
+    <li class="mnav__item"><button type="button" class="mnav__btn" aria-expanded="false">사업분야</button>
+      <div class="mnav__sub"><a href="business-liquid.html">액상밴드</a><a href="business-wound.html">창상피복제</a><a href="business-fire.html">리튬이온 소화기</a></div></li>
+    <li class="mnav__item"><button type="button" class="mnav__btn" aria-expanded="false">제품안내</button>
+      <div class="mnav__sub"><a href="products.html">전체 제품</a></div></li>
+    <li class="mnav__item"><button type="button" class="mnav__btn" aria-expanded="false">고객지원</button>
+      <div class="mnav__sub"><a href="contact.html">문의하기</a><a href="brochure.html">영문 소개서</a></div></li>
+  </ul>
+</nav>
+<div class="dim"></div>
+<main id="main">
+<section class="sub-visual">
+  <div class="sub-visual__inner">
+    <span class="sub-visual__label">ABOUT US</span>
+    <h2 class="sub-visual__title">회사소개</h2>
+    <p class="sub-visual__desc">무독성 의료용 접착 기술로 상처 보호의 새로운 기준을 만듭니다</p>
+    <ol class="breadcrumb" aria-label="현재 위치"><li>HOME</li><li>회사소개</li><li>오시는 길</li></ol>
+  </div>
+</section>
+<nav class="sub-tabs" aria-label="하위 메뉴"><ul class="sub-tabs__list"><li><a class="sub-tabs__link" href="company.html">회사개요</a></li><li><a class="sub-tabs__link" href="cert.html">인증현황</a></li><li><a class="sub-tabs__link is-active" href="location.html" aria-current="page">오시는 길</a></li></ul></nav>
+<section class="location">
+  <div class="inner">
+    <div class="sec-head reveal">
+      <span class="eyebrow eyebrow--cyan">LOCATION</span>
+      <h2 class="sec-title">오시는 길</h2>
+      <p class="sec-desc">경기도 성남시 수정구 복정로 101, 2층</p>
+    </div>
+    <!-- 카카오맵 API: 앱키 발급 후 아래 #kakao-map 에 지도 생성 (개발 단계). 지금은 자리 표시 -->
+    <div class="location__map reveal" id="kakao-map" data-addr="경기도 성남시 수정구 복정로 101, 2층">
+      <div class="location__map-ph">
+        <svg viewBox="0 0 48 64" aria-hidden="true"><path d="M24 0C10.7 0 0 10.7 0 24c0 18 24 40 24 40s24-22 24-40C48 10.7 37.3 0 24 0Z" fill="#1E2A6E"/><circle cx="24" cy="24" r="9" fill="#20B5CC"/></svg>
+        <b>(주)유원플러스팜</b>
+      </div>
+    </div>
+    <ul class="location__info">
+      <li class="reveal"><span class="location__ico"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 20s6.5-5.7 6.5-10.8a6.5 6.5 0 0 0-13 0C4.5 14.3 11 20 11 20Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="11" cy="9.2" r="2.4" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span><dl><dt>주소</dt><dd>경기도 성남시 수정구 복정로 101, 2층</dd></dl></li>
+      <li class="reveal"><span class="location__ico"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M6.2 3.1h2.4l1.2 4-1.8 1.3a10.4 10.4 0 0 0 5.6 5.6l1.3-1.8 4 1.2v2.4a2 2 0 0 1-2.1 2A14.7 14.7 0 0 1 4.2 5.2a2 2 0 0 1 2-2.1Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><dl><dt>대표번호</dt><dd><a href="tel:031-778-6186">031-778-6186</a></dd></dl></li>
+      <li class="reveal"><span class="location__ico"><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M6 8V3h10v5M6 15H3.5V8h15v7H16M6 12h10v7H6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><dl><dt>팩스</dt><dd>031-697-8907</dd></dl></li>
+      <li class="reveal"><span class="location__ico"><svg viewBox="0 0 22 22" aria-hidden="true"><rect x="2.5" y="4.5" width="17" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3 5.5 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><dl><dt>이메일</dt><dd><a href="mailto:plus-1220@naver.com">plus-1220@naver.com</a></dd></dl></li>
+    </ul>
+    <div class="location__btns">
+      <a class="btn btn--kakao" href="https://map.kakao.com/link/search/경기도 성남시 수정구 복정로 101" target="_blank" rel="noopener">카카오맵으로 길찾기</a>
+      <a class="btn btn--naver" href="https://map.naver.com/p/search/경기도 성남시 수정구 복정로 101" target="_blank" rel="noopener">네이버지도로 길찾기</a>
+    </div>
+  </div>
+</section>
+
+<section class="cert-band" aria-label="인증">
+  <div class="cert-band__inner">
+    <div class="cert-band__title">
+      <span class="eyebrow eyebrow--cyan">CERTIFICATION</span>
+      <strong>믿을 수 있는 품질 기준</strong>
+    </div>
+    <ul class="cert-band__list">
+      <li><svg class="ico-shield" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>FDA</b><span>미국 FDA 등록</span></div></li>
+      <li><svg class="ico-shield" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>CE</b><span>유럽 CE 인증</span></div></li>
+      <li><svg class="ico-shield" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>KGMP</b><span>의료기기 제조·품질관리기준</span></div></li>
+      <li><svg class="ico-shield" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>ISO 9001 · 14001 · 45001</b><span>품질·환경·안전보건 경영시스템</span></div></li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__logo"><img src="images/common/logo.png" alt="(주)유원플러스팜"></div>
+    <div class="footer__links">
+      <a href="#" class="is-strong">개인정보처리방침</a>
+      <a href="#">이메일무단수집거부</a>
+    </div>
+    <div class="footer__line"></div>
+    <div class="footer__info">
+      <p><span>(주)유원플러스팜</span><i class="sep">|</i><span>대표자: 송태호</span><i class="sep">|</i><span>사업자등록번호: 403-81-86166</span></p>
+      <p><span>본사: 경기도 성남시 수정구 복정로 101, 2층</span><i class="sep">|</i><span>물류센터: 경기도 안양시 동안구 흥안대로 125</span></p>
+      <p><span>E. plus-1220@naver.com</span></p>
+    </div>
+    <p class="footer__copy">© 2026 UWPLUSPHARM. All rights reserved.</p>
+  </div>
+</footer>
+<script src="js/common.js"></script>
+<script src="js/sub.js"></script>
+</body>
+</html>
