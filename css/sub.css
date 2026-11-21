@@ -121,7 +121,7 @@
 .folder-tabs__link{position:relative;display:flex;align-items:center;justify-content:center;height:64px;border-radius:16px 16px 0 0;background:var(--bg-tab);font-size:18px;font-weight:500;color:var(--text-subtle);transition:color .2s,background-color .2s}
 .folder-tabs__link:hover{color:var(--brand-navy)}
 .folder-tabs__link.is-active{background:#fff;color:var(--brand-navy);font-weight:700}
-.folder-tabs__link.is-active::before{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:16px 16px 0 0;background:var(--brand-cyan)}
+.folder-tabs__link.is-active::before{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:0;background:var(--brand-cyan)}
 @media (max-width:1024px){.folder-tabs{top:72px}}
 @media (max-width:768px){.folder-tabs__list{gap:4px}.folder-tabs__link{height:52px;font-size:14px;border-radius:12px 12px 0 0}}
 
