@@ -68,8 +68,11 @@ input,textarea,select{font:inherit;color:inherit}
 .gnb__list{display:flex;gap:96px;height:100%}
 .gnb__item{position:relative;display:flex;align-items:center;height:100%}
 .gnb__link{position:relative;font-size:18px;font-weight:500;color:var(--text-primary);white-space:nowrap}
-.gnb__item.is-active .gnb__link,.gnb__link:hover{color:var(--brand-navy);font-weight:700}
-.gnb__item.is-active .gnb__link::after,.gnb__item:hover .gnb__link::after{content:'';position:absolute;left:0;right:0;bottom:-33px;height:3px;background:var(--brand-cyan)}
+.gnb__item.is-active .gnb__link,.gnb__item.is-hover .gnb__link,.gnb__link:hover{color:var(--brand-navy);font-weight:700}
+.gnb__item.is-active .gnb__link::after,.gnb__item.is-hover .gnb__link::after{content:'';position:absolute;left:0;right:0;bottom:-33px;height:3px;background:var(--brand-cyan)}
+/* 풀네비 열려 있을 때는 hover 중인 메뉴만 강조 (현재 페이지 표시는 잠시 숨김) */
+.header.is-open .gnb__item.is-active:not(.is-hover) .gnb__link{color:var(--text-primary);font-weight:500}
+.header.is-open .gnb__item.is-active:not(.is-hover) .gnb__link::after{content:none}
 .header__cta{display:flex;align-items:center;gap:12px}
 .header__cta .btn--kakao{height:56px;font-size:15px}
 .btn-menu{display:none;width:40px;height:40px;position:relative}
@@ -85,7 +88,7 @@ input,textarea,select{font:inherit;color:inherit}
 .fullnav{position:absolute;left:0;right:0;top:96px;background:var(--bg-white);border-top:1px solid var(--line-default);box-shadow:0 16px 32px rgba(15,26,51,.12);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
 .header.is-open .fullnav{opacity:1;visibility:visible}
 .fullnav__cols{position:relative;height:176px}
-.fullnav__col{position:absolute;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:18px;padding-top:36px;transform:translateX(-50%);min-width:111px}
+.fullnav__col{position:absolute;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;gap:18px;padding:36px 24px 0;transform:translateX(-50%);min-width:160px;transition:background-color .2s}
 .fullnav__col.is-hover{background:var(--bg-surface)}
 .fullnav__col a{font-size:15px;color:var(--text-muted);white-space:nowrap}
 .fullnav__col a:hover{color:var(--brand-navy);font-weight:600}

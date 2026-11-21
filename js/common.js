@@ -35,10 +35,14 @@
     header.classList.add('is-open');
     dim && dim.classList.add('is-on');
   }
+  function setHover(i) {
+    gnbItems.forEach(function (g, j) { g.classList.toggle('is-hover', i === j); });
+    cols.forEach(function (c, j) { c.classList.toggle('is-hover', i === j); });
+  }
   function closeNav() {
     header.classList.remove('is-open');
     dim && dim.classList.remove('is-on');
-    cols.forEach(function (c) { c.classList.remove('is-hover'); });
+    setHover(-1);
   }
   var gnb = document.querySelector('.gnb');
   var fullnav = document.querySelector('.fullnav');
@@ -49,15 +53,13 @@
     fullnav.addEventListener('focusout', function (e) {
       if (!header.contains(e.relatedTarget)) closeNav();
     });
+    /* GNB 항목과 풀네비 컬럼을 짝으로 묶어, 어느 쪽에 올려도 둘 다 hover 상태 유지 */
     gnbItems.forEach(function (item, i) {
-      item.addEventListener('mouseenter', function () {
-        cols.forEach(function (c, j) { c.classList.toggle('is-hover', i === j); });
-      });
+      item.addEventListener('mouseenter', function () { setHover(i); });
     });
-    cols.forEach(function (col) {
-      col.addEventListener('mouseenter', function () {
-        cols.forEach(function (c) { c.classList.toggle('is-hover', c === col); });
-      });
+    cols.forEach(function (col, i) {
+      col.addEventListener('mouseenter', function () { setHover(i); });
+      col.addEventListener('focusin', function () { setHover(i); });
     });
   }
 
