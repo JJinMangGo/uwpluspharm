@@ -73,6 +73,8 @@ input,textarea,select{font:inherit;color:inherit}
 /* 풀네비 열려 있을 때: 글자 밑줄 대신 하위 컬럼 상단에 컬럼 폭만큼 라인 */
 .header.is-open .gnb__item.is-active:not(.is-hover) .gnb__link{color:var(--text-primary);font-weight:500}
 .header.is-open .gnb__item .gnb__link::after{content:none}
+/* 스크롤 내리면 현재 메뉴 밑줄 숨김 (아래 sticky 탭 라인과 겹치지 않게) */
+.header.is-scrolled .gnb__item.is-active .gnb__link::after{content:none}
 .header__cta{display:flex;align-items:center;gap:12px}
 .header__cta .btn--kakao{height:56px;font-size:15px}
 .btn-menu{display:none;width:40px;height:40px;position:relative}
