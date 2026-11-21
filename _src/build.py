@@ -146,7 +146,7 @@ for page in sorted((SRC / 'pages').glob('*.html')):
     if meta.get('menu') in VISUAL and page.stem != 'index':
         tabs_html = '' if meta.get('tabs') == 'no' else sub_tabs(meta['menu'], meta.get('crumb', ''))
         raw = sub_visual(meta, meta['menu']) + tabs_html + raw
-    raw = re.sub(r'<!--\s*cards:([^\s]+)\s*-->', lambda m: cards(m.group(1)), raw)
+    raw = re.sub(r'<!--\s*cards:(.+?)\s*-->', lambda m: cards(m.group(1).strip()), raw)
     css = ''.join(f'<link rel="stylesheet" href="css/{c.strip()}.css">\n' for c in meta.get('css', '').split(',') if c.strip())
     js = ''.join(f'<script src="js/{j.strip()}.js"></script>\n' for j in meta.get('js', '').split(',') if j.strip())
     out = TPL.format(title=title, css=css, js=js, vcss=vcss, vjs=vjs, body=meta.get('body', 'sub'),
