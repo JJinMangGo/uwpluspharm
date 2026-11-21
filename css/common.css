@@ -69,7 +69,7 @@ input,textarea,select{font:inherit;color:inherit}
 .gnb__item{position:relative;display:flex;align-items:center;height:100%}
 .gnb__link{position:relative;font-size:18px;font-weight:500;color:var(--text-primary);white-space:nowrap}
 .gnb__item.is-active .gnb__link,.gnb__item.is-hover .gnb__link,.gnb__link:hover{color:var(--brand-navy);font-weight:700}
-.gnb__item.is-active .gnb__link::after,.gnb__item.is-hover .gnb__link::after{content:'';position:absolute;left:0;right:0;bottom:-33px;height:3px;background:var(--brand-cyan)}
+.gnb__item.is-active .gnb__link::after,.gnb__item.is-hover .gnb__link::after{content:'';position:absolute;left:50%;bottom:-34px;width:160px;height:3px;transform:translateX(-50%);background:var(--brand-cyan)} /* 풀네비 컬럼 폭(160px)과 동일 */
 /* 풀네비 열려 있을 때: 글자 밑줄 대신 하위 컬럼 상단에 컬럼 폭만큼 라인 */
 .header.is-open .gnb__item.is-active:not(.is-hover) .gnb__link{color:var(--text-primary);font-weight:500}
 .header.is-open .gnb__item .gnb__link::after{content:none}
