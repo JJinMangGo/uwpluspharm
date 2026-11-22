@@ -128,10 +128,10 @@
 @media (max-width:768px){
   .m-net{padding:80px 0}
   .m-net__title{font-size:28px}
-  .m-net__desc{font-size:15px;padding:0 20px}
+  .m-net__desc{font-size:15px;padding:0}
   .m-net__map{margin-top:32px;width:118%;margin-left:-14%}
   .m-net__pin{height:20px;font-size:10px;padding:0 7px}
-  .m-net__chips{margin-top:24px;gap:8px;padding:0 20px}
+  .m-net__chips{margin-top:24px;gap:0;padding:0}
   .m-net__chips li{height:38px;padding:0 16px;font-size:14px}
 }
 

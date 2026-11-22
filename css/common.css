@@ -143,6 +143,7 @@ input,textarea,select{font:inherit;color:inherit}
 @media (max-width:1024px){.footer__inner{padding:0 20px}}
 @media (max-width:768px){
   .footer{padding:40px 0}
+  .footer__logo img{width:44px}
   .footer__info,.footer__copy{font-size:13px}
   .footer__info .sep{display:none}
   .footer__info span{display:block}
