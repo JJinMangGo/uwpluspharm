@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /* UWPLUSPHARM sub pages */
 
-.sec{padding:120px 0}
+.sec{padding:100px 0}
 .sec--surface{background:var(--bg-surface)}
 .sec-head{display:flex;flex-direction:column;gap:12px;max-width:760px}
 .sec-head .sec-desc{color:var(--text-muted)}
 .sec-head--row{flex-direction:row;align-items:flex-end;justify-content:space-between;max-width:none}
-@media (max-width:768px){.sec{padding:72px 0}.sec-head--row{flex-direction:column;align-items:flex-start;gap:12px}}
+@media (max-width:768px){.sec{padding:56px 0}.sec-head--row{flex-direction:column;align-items:flex-start;gap:12px}}
 
 /* ---------- 회사개요 ---------- */
 .about-intro{padding:120px 0 60px}
@@ -14,7 +14,7 @@
 .about-intro__text{font-size:17px;line-height:1.65;color:var(--text-secondary)}
 .about-intro__img{height:480px;border-radius:32px;overflow:hidden}
 .about-intro__img img{width:100%;height:100%;object-fit:cover}
-.about-kw{padding:60px 0 120px}
+.about-kw{padding:40px 0 100px}
 .about-kw__list{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .about-kw__list li{display:flex;flex-direction:column;gap:12px;padding:40px 36px;border-radius:24px;background:var(--bg-surface)}
 .about-kw__list b{font-size:24px;font-weight:700;color:var(--brand-navy)}
@@ -34,7 +34,7 @@
   .about-intro__text{font-size:15px}
   .about-intro__text br{display:none}
   .about-intro__img{height:220px;border-radius:20px}
-  .about-kw{padding:32px 0 72px}
+  .about-kw{padding:24px 0 56px}
   .about-kw__list{grid-template-columns:1fr;gap:12px}
   .about-kw__list li{padding:28px 24px}
   .about-kw__list b{font-size:20px}
@@ -44,10 +44,11 @@
 /* ---------- 인증현황 ---------- */
 .cert{padding:100px 0 140px}
 .cert .sec-head{margin-bottom:56px}
-.cert__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:56px 24px}
-.cert__item{display:flex;flex-direction:column;gap:20px;text-align:left}
+.cert__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:56px 24px}
+.cert__grid>li{min-width:0}
+.cert__item{display:flex;flex-direction:column;gap:20px;width:100%;min-width:0;text-align:left}
 .cert__thumb{position:relative;display:flex;align-items:center;justify-content:center;height:380px;padding:28px;border:1px solid var(--line-default);border-radius:16px;background:var(--bg-surface);transition:border-color .2s}
-.cert__thumb img{width:220px;max-width:100%;box-shadow:0 8px 24px rgba(30,42,110,.12)}
+.cert__thumb img{width:100%;max-width:220px;box-shadow:0 8px 24px rgba(30,42,110,.12)}
 .cert__zoom{position:absolute;right:16px;bottom:16px;width:40px;height:40px;border-radius:50%;background:var(--brand-navy);color:var(--bg-white);display:flex;align-items:center;justify-content:center;transition:transform .2s}
 .cert__zoom svg{width:16px;height:16px}
 .cert__item:hover .cert__thumb{border-color:var(--brand-navy)}
@@ -57,11 +58,12 @@
 .cert__text span{font-size:15px;color:var(--text-muted)}
 .cert__text em{font-style:normal;font-size:13px;font-weight:600;color:var(--brand-cyan)}
 .cert__note{margin-top:56px;font-size:14px;color:var(--text-subtle)}
-@media (max-width:1100px){.cert__grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:1100px){.cert__grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:768px){
   .cert{padding:72px 0}
   .cert .sec-head{margin-bottom:32px}
-  .cert__grid{grid-template-columns:repeat(2,1fr);gap:32px 12px}
+  .cert__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 12px}
+  .cert__text span{word-break:break-all}
   .cert__thumb{height:auto;aspect-ratio:302/380;padding:16px}
   .cert__text b{font-size:16px}
   .cert__text span{font-size:13px}
@@ -140,7 +142,7 @@
 .line-prods .sec-head--row{margin-bottom:32px}
 .line-prods h2{font-size:30px;font-weight:700}
 @media (max-width:1200px){.line-intro__img{flex-basis:48%;height:auto;aspect-ratio:640/420}}
-@media (max-width:900px){.line-intro__inner{flex-direction:column-reverse;align-items:stretch;gap:32px}.line-intro__img{flex-basis:auto}}
+@media (max-width:900px){.line-intro__inner{flex-direction:column-reverse;align-items:stretch;gap:32px}.line-intro__copy,.line-intro__img{flex:none}}
 @media (max-width:768px){
   .line-intro{padding:56px 0 48px}
   .line-intro__text{font-size:15px}
