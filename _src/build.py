@@ -115,7 +115,7 @@ TPL = '''<!DOCTYPE html>
 <meta property="og:image" content="{site}/images/common/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="유원플러스팜 — 상처를 덮는 것이 아니라, 일상을 보호합니다.">
+<meta property="og:image:alt" content="유원플러스팜 — 무독성 의료용 접착 기술로 상처를 보호합니다.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 {vcss}<link rel="stylesheet" href="css/tokens.css">
