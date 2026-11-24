@@ -14,6 +14,9 @@ SITE = {
     'ADDR': '경기도 성남시 수정구 복정로 101, 2층',
     'HOURS': '평일 09:00 – 18:00 (점심 12:00 – 13:00)',
 }
+# 공유 미리보기(OG)용 절대 주소 — 도메인 바뀌면 여기만 교체
+SITE_URL = 'https://uwpluspharm.com'
+DESC = '유원플러스팜 — 액상밴드·창상피복제·리튬이온 소화기 전문기업'
 MENUS = ['company', 'business', 'product', 'support']
 
 # 서브 비주얼 (메뉴별)
@@ -103,7 +106,17 @@ TPL = '''<!DOCTYPE html>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="images/common/favicon-32.png">
 <link rel="apple-touch-icon" href="images/common/apple-touch-icon.png">
-<meta name="description" content="유원플러스팜 — 액상밴드·창상피복제·리튬이온 소화기 전문기업">
+<meta name="description" content="{desc}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="유원플러스팜">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{site}/images/common/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="유원플러스팜 — 상처를 덮는 것이 아니라, 일상을 보호합니다.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 {vcss}<link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/common.css">
@@ -152,7 +165,8 @@ for page in sorted((SRC / 'pages').glob('*.html')):
     raw = re.sub(r'<!--\s*cards:(.+?)\s*-->', lambda m: cards(m.group(1).strip()), raw)
     css = ''.join(f'<link rel="stylesheet" href="css/{c.strip()}.css">\n' for c in meta.get('css', '').split(',') if c.strip())
     js = ''.join(f'<script src="js/{j.strip()}.js"></script>\n' for j in meta.get('js', '').split(',') if j.strip())
-    out = TPL.format(title=title, css=css, js=js, vcss=vcss, vjs=vjs, body=meta.get('body', 'sub'),
+    url = SITE_URL + '/' + ('' if page.stem == 'index' else page.name)
+    out = TPL.format(title=title, desc=DESC, url=url, site=SITE_URL, css=css, js=js, vcss=vcss, vjs=vjs, body=meta.get('body', 'sub'),
                      header=h.rstrip(), content=raw.rstrip(), footer=footer.rstrip())
     (ROOT / page.name).write_text(fill(include(out)), encoding='utf-8')
     print('built', page.name)
